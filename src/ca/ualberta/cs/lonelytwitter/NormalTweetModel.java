@@ -22,4 +22,10 @@ public class NormalTweetModel extends LonelyTweetModel
 	public String getStatus() {
 		return "Normal";
 	}
+
+	@Override
+	public boolean isImportant()
+	{
+		return false;
+	}
 }
