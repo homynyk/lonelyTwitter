@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class NormalTweetModel extends LonelyTweetModel {
 	
+	
 	public NormalTweetModel(String text, Date timestamp) {
 		super(text, timestamp);
 	}
