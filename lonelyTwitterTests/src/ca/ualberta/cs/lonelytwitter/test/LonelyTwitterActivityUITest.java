@@ -67,8 +67,8 @@ public class LonelyTwitterActivityUITest extends
 				Adapter adapter = listView.getAdapter();
 				String tweet = "TDD 4 LYFE #YOLO";
 				makeTweet(tweet);
-				NormalTweetModel normal = new NormalTweetModel();
-				Boolean isNormal = normal.equals(adapter.getItem(adapter.getCount()-1));
+				
+				Boolean isNormal = adapter.getItem(adapter.getCount()-1) instanceof NormalTweetModel;
 				assertTrue(isNormal);
 				
 				
