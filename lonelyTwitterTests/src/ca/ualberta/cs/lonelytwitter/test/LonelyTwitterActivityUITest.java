@@ -57,6 +57,24 @@ public class LonelyTwitterActivityUITest extends
 		});
 	}
 	
+	public void testIsNormalTweetModel() throws Throwable{
+		runTestOnUiThread(new Runnable()
+		{
+			
+			@Override
+			public void run() {
+				ListView listView = (ListView)activity.findViewById(ca.ualberta.cs.lonelytwitter.R.id.oldTweetsList);
+				Adapter adapter = listView.getAdapter();
+				String tweet = "TDD 4 LYFE #YOLO";
+				makeTweet(tweet);
+				NormalTweetModel normal = new NormalTweetModel();
+				Boolean isNormal = normal.equals(adapter.getItem(adapter.getCount()-1));
+				assertTrue(isNormal);
+				
+				
+			}
+		});
+	}
 	/*
 	 * fills in the input text field and clicks the 'save'
 	 * button for the activity under test
